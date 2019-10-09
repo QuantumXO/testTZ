@@ -3,18 +3,6 @@
         item.classList.remove('active');
     }
 
-    document.addEventListener('mouseover', (e) => {
-        const target  = e.target;
-
-       if(target.classList.contains('main__block__title')){
-            target.closest('.main__block').querySelector('.main__block__line').classList.add('active');
-       }else {
-           [...document.querySelectorAll('.main__block__line')].forEach(item => {
-               removeActiveClassFromItem(item);
-           })
-       }
-    });
-
     document.addEventListener('click', (e) => {
         const target  = e.target;
         const itemsOfTabsList = document.querySelectorAll('.main__tab__item');

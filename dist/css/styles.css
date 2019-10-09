@@ -271,11 +271,11 @@ body {
       content: '';
       border-radius: 50%;
       background-color: #ffffff; }
-    .main__block__line.active {
+    .main__block__line {
       -webkit-animation: lineAnimation .1s infinite;
       animation: lineAnimation .1s infinite; }
-    .main__block__line__wrap {
-      position: absolute; }
+      .main__block__line__wrap {
+        position: absolute; }
   .main__notebook__wrap {
     margin-top: -112px;
     width: 100%;
