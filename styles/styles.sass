@@ -1,0 +1,253 @@
+@import 'reset'
+@import 'config'
+
+*, *:after, *:before
+  box-sizing: border-box
+
+
+html,
+body
+  width: 100%
+  height: 100%
+
+body
+  font: 400 16px -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+  background: linear-gradient(98.3deg, #1E3AB3 9.47%, #1652F0 83.7%)
+
+.container
+  margin: 0 auto
+  max-width: 1341px
+
+.header
+  width: 100%
+  padding-top: 20px
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  &__logo
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    &__title
+      margin-left: 7px
+      color: #ffffff
+
+  &__nav
+    &__list
+      display: flex
+      align-items: center
+      justify-content: flex-start
+
+    &__item
+      &:not(:first-child)
+        margin-left: 38px
+
+    &__link
+      display: inline-block
+      position: relative
+      color: #cddbff
+      text-decoration: none
+      transition: .3s ease-in-out
+
+      &:hover
+        color: #fff
+
+        &:after
+          display: inline-block
+
+      &:after
+        top: calc(100% + 13px)
+        left: 50%
+        width: 5px
+        height: 5px
+        display: none
+        content: ''
+        border-radius: 50%
+        position: absolute
+        background-color: #ffffff
+        transition: .3s ease-in-out
+        transform: translateX(-50%)
+
+  &.inverse
+    .header
+      &__logo
+        &__title
+          color: #2343CB
+
+      &__nav
+        &__link
+          color: #5e77aa
+
+          &:hover
+            color: #1652f0
+
+          &:after
+            background-color: #1652f0
+
+.main
+  //overflow: hidden
+  position: relative
+
+  &.features
+    margin-top: 150px
+
+  &.security
+    margin-top: 165px
+    margin-bottom: 195px
+
+    .main
+      &__wrap
+        margin-left: 190px
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+      &__inner
+        &__title
+          color: #0f3256
+          font-size: 25px
+          font-weight: 500
+
+      &__tab
+        &__list
+          margin-top: 40px
+          overflow: hidden
+
+        &__item
+          float: left
+          font-weight: 500
+          font-size: 20px
+          cursor: pointer
+          
+          &:hover,
+          &.active
+            color: #3A5BEA
+
+          &:not(:first-child)
+            margin-left: 49px
+            
+        &__content
+          margin-top: 29px
+          color: #838FA0
+          display: none
+
+          &.active
+            display: block
+
+      &__image
+        margin-left: 62px
+
+  &__block
+    position: absolute
+
+    &:first-child
+      top: 112px
+      left: 40px
+      max-width: 211px
+
+      .main__block__content
+        max-width: 184px
+
+      .main__block__point
+        top: 16px
+        right: -20px
+        transform: translateY(-50%)
+
+      .main__block__line__wrap
+        top: 15px
+        left: calc(100% + 15px)
+
+    &:nth-child(2)
+      top: 288px // 175px
+      left: 0
+      max-width: 219px
+
+      .main__block__point
+        bottom: -14px
+        left: 86px
+
+      .main__block__line__wrap
+        top: calc(100% + 10px)
+        left: 209px
+        transform: translateX(-50%)
+
+    &:nth-child(3)
+      top: 453px // 347
+      left: 40px
+      max-width: 219px
+
+      .main__block__point
+        bottom: -14px
+        left: 86px
+
+      .main__block__line__wrap
+        top: 36px
+        left: 246px
+        transform: translateX(-50%)
+
+    &:nth-child(4)
+      top: 90px // -21
+      right: 153px
+      max-width: 219px
+
+      .main__block__point
+        top: 50%
+        left: -14px
+        transform: translateY(-50%)
+
+      .main__block__line__wrap
+        top: 42px
+        left: -68px
+        transform: translateX(-50%)
+
+
+
+
+
+
+
+    &__title
+      width: 100%
+      display: inline-block
+      color: #ffffff
+      font-size: 12px
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+    &__content
+      margin-top: 13px
+      display: inline-block
+      font-size: 10px
+      color: #cddbff
+
+    &__point
+      width: 5px
+      height: 5px
+      position: absolute
+      content: ''
+      border-radius: 50%
+      background-color: #ffffff
+
+    &__line
+      &.active
+        animation: lineAnimation .1s infinite
+
+      &__wrap
+        position: absolute
+
+  &__notebook
+    &__wrap
+      margin-top: -112px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+
+
+
+
+

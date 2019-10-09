@@ -1,0 +1,27 @@
+@mixin desktop
+  @media (min-width: 1024px)
+    @content
+
+@mixin tablet-desktop
+  @media (min-width: 768px)
+    @content
+
+@mixin tablet
+  @media (max-width: 767px)
+    @content
+
+@mixin mobile
+  @media (max-width: 560px)
+    @content
+
+.clearfix::after
+  content: ""
+  display: table
+  clear: both
+
+.bg--white
+  background: #ffffff
+
+@keyframes lineAnimation
+  to
+    stroke-dashoffset: -5
